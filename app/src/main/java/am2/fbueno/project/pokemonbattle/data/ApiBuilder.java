@@ -11,17 +11,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class ApiBuilder {
-    private static final String API_BASE_URL="http://api.backendless.com";
+    private static final String API_BASE_URL = "http://api.backendless.com";
     private static SecurityService securityApi;
     private static OkHttpClient.Builder httpClient;
 
     public static SecurityService getSecurityClient() {
         if (securityApi == null) {
 
-            Retrofit.Builder builder =new Retrofit.Builder()
+            Retrofit.Builder builder = new Retrofit.Builder()
                     .baseUrl(API_BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create());
-            httpClient =new OkHttpClient.Builder();
+            httpClient = new OkHttpClient.Builder();
             httpClient.addInterceptor(interceptor());
 
             Retrofit retrofit = builder.client(httpClient.build()).build();
@@ -30,8 +30,8 @@ public class ApiBuilder {
         return securityApi;
     }
 
-    private static HttpLoggingInterceptor interceptor(){
-        HttpLoggingInterceptor httpLoggingInterceptor= new HttpLoggingInterceptor();
+    private static HttpLoggingInterceptor interceptor() {
+        HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         return httpLoggingInterceptor;
     }

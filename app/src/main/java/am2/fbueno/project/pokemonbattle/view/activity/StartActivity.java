@@ -13,49 +13,24 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import am2.fbueno.project.pokemonbattle.R;
+import am2.fbueno.project.pokemonbattle.domain.StartPresenter;
 import am2.fbueno.project.pokemonbattle.utility.SecuritySession;
+import am2.fbueno.project.pokemonbattle.view.View;
 
-public class StartActivity extends ActionBarActivity {
+public class StartActivity extends View {
     private static final long SPLASH_SCREEN_DELAY = 2000;
+    private StartPresenter startPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-
-        TimerTask task = new TimerTask()
-        {
-            @Override
-            public void run() {
-                Intent intent;
-                boolean signed= SecuritySession.hasLogged(StartActivity.this);
-                if(signed)
-                {
-                    intent=new Intent(StartActivity.this, MainActivity.class);
-                }else {
-                    intent = new Intent(StartActivity.this, LoginActivity.class);
-                }
-                startActivity(intent);
-                finish();
-            }
-        };
-
-        Timer timer = new Timer();
-        timer.schedule(task, SPLASH_SCREEN_DELAY);
-    }
-
-    private Class<?> switchActivity(boolean validator){
-        return validator ? MainActivity.class : LoginActivity.class;
+        startPresenter = StartPresenter.make(this, LoginActivity.class, MainActivity.class);
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        return false;
+    protected void onStart() {
+        super.onStart();
+        startPresenter.startSession(SPLASH_SCREEN_DELAY);
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return false;
-    }
-
 }

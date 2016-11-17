@@ -5,6 +5,7 @@ import am2.fbueno.project.pokemonbattle.data.request.LoginRequest;
 import am2.fbueno.project.pokemonbattle.data.response.LoginResponse;
 import am2.fbueno.project.pokemonbattle.data.service.SecurityService;
 import am2.fbueno.project.pokemonbattle.entity.User;
+import am2.fbueno.project.pokemonbattle.utility.Mapper;
 import am2.fbueno.project.pokemonbattle.view.LoginView;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -28,27 +29,23 @@ public class LoginPresenter {
     }
 
     public void login(String login, String password){
-        LoginRequest request = new LoginRequest();
-        request.setLogin(login);
-        request.setPassword(password);
+        LoginRequest request = new LoginRequest(login, password);
         Call<LoginResponse> responseCall = securityService.login(request);
         responseCall.enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if(response.isSuccessful()){
                     LoginResponse responseLogin = response.body();
-                    User user = new User();
-                    user.setId(responseLogin.getId());
-                    user.setName(responseLogin.getName());
+                    User user = Mapper.ParseLoginResponse(responseLogin);
                     loginView.gotoMain(user);
                 }else {
-                    loginView.showMessage(loginView.getContext(), "Error al ingresar al sistema!");
+                    loginView.showMessage("Error al ingresar al sistema!");
                 }
             }
 
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
-                loginView.showMessage(loginView.getContext(),new StringBuffer().append(t.getMessage()).toString());
+                loginView.showMessage(new StringBuffer().append(t.getMessage()).toString());
             }
         });
     }

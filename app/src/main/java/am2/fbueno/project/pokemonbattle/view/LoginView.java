@@ -1,13 +1,29 @@
 package am2.fbueno.project.pokemonbattle.view;
 
-import android.content.Context;
+import android.content.Intent;
 
 import am2.fbueno.project.pokemonbattle.entity.User;
+import am2.fbueno.project.pokemonbattle.utility.SecuritySession;
+import am2.fbueno.project.pokemonbattle.view.activity.MainActivity;
 
 /**
  * Created by FBueno on 11/11/2016.
  */
 
-public interface LoginView extends View{
-    void gotoMain(User user);
+public abstract class LoginView extends View {
+    protected Class<?> mainClass;
+
+    public LoginView(Class<?> mainClass) {
+        this.mainClass = mainClass;
+    }
+
+    public void gotoMain(User user) {
+        saveSession(user);
+        Intent intent = new Intent(this, mainClass);
+        startActivity(intent);
+    }
+
+    private void saveSession(User user) {
+        SecuritySession.signIn(this, user);
+    }
 }
