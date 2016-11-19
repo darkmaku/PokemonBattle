@@ -27,6 +27,8 @@ public class LoginImplementation extends LoginView  {
         initializeComponents();
     }
 
+
+
     private void initializeComponents(){
         loginPresenter = LoginPresenter.MakePresenter(this);
         txtLogin = (EditText)findViewById(R.id.txtLogin);
