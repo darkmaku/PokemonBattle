@@ -9,14 +9,22 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="am2.fbueno.project.pokemonbattle.implementation.LoginImplementation">
-    <TextView
+    android:background="@drawable/pokefondo"
+    tools:context="am2.fbueno.project.pokemonbattle.implementation.LoginImplementation"
+    android:weightSum="1">
+
+    <ImageView
+        android:src="@drawable/log"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="62dp"
         android:text="Pokemon battle front"
         android:textAlignment="center"
         android:textSize="10pt"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:id="@+id/textView"
+        android:background="#c32025"
+        android:layout_weight="0.36" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,7 +57,10 @@
             android:id="@+id/txtPassword"
             android:layout_weight="3"/>
     </LinearLayout>
+
     <Button
+        android:background="@drawable/boton"
+        android:onClick="PopUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ingresar"
