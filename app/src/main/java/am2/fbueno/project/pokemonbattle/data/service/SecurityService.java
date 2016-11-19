@@ -24,6 +24,12 @@ public interface SecurityService {
     @POST("/v1/users/login")
     Call<LoginResponse> login(@Body LoginRequest request);
 
+    @Headers({
+            "content-type: application/json",
+            "application-id: 36ADC0BF-BC45-AF00-FFBB-9F2C409F7200",
+            "secret-key: 65E0A253-9DAE-3F98-FF8C-F02429CA7B00",
+            "application-type: REST"
+    })
     @GET("/v1/data/UserDetail?where=ownerId%3D")
     Call<UserDetailResponse> getUserDetails(@Url String url);
 }

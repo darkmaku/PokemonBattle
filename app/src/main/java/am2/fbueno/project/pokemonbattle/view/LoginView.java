@@ -14,21 +14,6 @@ import am2.fbueno.project.pokemonbattle.utility.SecuritySession;
 public abstract class LoginView extends View {
     protected Class<?> mainClass;
 
-    public void PopUp(View v){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Chupamela :3")
-                .setTitle("Holi Boli")
-                .setCancelable(false)
-                .setNeutralButton("Aceptar",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        });
-        AlertDialog alert = builder.create();
-        alert.show();
-    }
-
     public LoginView(Class<?> mainClass) {
         this.mainClass = mainClass;
     }

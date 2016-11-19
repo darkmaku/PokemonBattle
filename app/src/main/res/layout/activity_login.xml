@@ -59,8 +59,7 @@
     </LinearLayout>
 
     <Button
-        android:background="@drawable/botondos"
-        android:onClick="PopUp"
+        android:background="@drawable/boton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ingresar"

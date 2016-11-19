@@ -1,6 +1,8 @@
 package am2.fbueno.project.pokemonbattle.view;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
@@ -10,6 +12,19 @@ import android.widget.Toast;
 
 public abstract class View extends AppCompatActivity {
     public void showMessage(String message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Mensaje de error")
+                .setTitle(message)
+                .setCancelable(false)
+                .setNeutralButton("Aceptar",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                                finish();
+                            }
+                        });
+        AlertDialog alert = builder.create();
+        alert.show();
         Toast.makeText(getContext(), message, Toast.LENGTH_LONG);
     }
 

@@ -1,5 +1,6 @@
 package am2.fbueno.project.pokemonbattle.data;
 
+import am2.fbueno.project.pokemonbattle.data.service.DataService;
 import am2.fbueno.project.pokemonbattle.data.service.SecurityService;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -12,12 +13,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiBuilder {
     private static final String API_BASE_URL = "http://api.backendless.com";
-    private static SecurityService securityApi;
     private static OkHttpClient.Builder httpClient;
+
+    private static SecurityService securityApi;
+    private static DataService dataApi;
 
     public static SecurityService getSecurityClient() {
         if (securityApi == null) {
-
             Retrofit.Builder builder = new Retrofit.Builder()
                     .baseUrl(API_BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create());
@@ -28,6 +30,20 @@ public class ApiBuilder {
             securityApi = retrofit.create(SecurityService.class);
         }
         return securityApi;
+    }
+
+    public static DataService getDataClient() {
+        if (dataApi == null) {
+            Retrofit.Builder builder = new Retrofit.Builder()
+                    .baseUrl(API_BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create());
+            httpClient = new OkHttpClient.Builder();
+            httpClient.addInterceptor(interceptor());
+
+            Retrofit retrofit = builder.client(httpClient.build()).build();
+            dataApi = retrofit.create(DataService.class);
+        }
+        return dataApi;
     }
 
     private static HttpLoggingInterceptor interceptor() {
