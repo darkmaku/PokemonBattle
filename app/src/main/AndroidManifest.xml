@@ -11,15 +11,16 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.activity.StartActivity">
+        <activity android:name=".implementation.StartImplementation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activity.LoginActivity" />
-        <activity android:name=".view.activity.MainActivity"></activity>
+        <activity android:name=".implementation.LoginImplementation" />
+        <activity android:name=".implementation.MainImplementation" />
+        <activity android:name=".implementation.UserDetailImplementation"></activity>
     </application>
 
 </manifest>

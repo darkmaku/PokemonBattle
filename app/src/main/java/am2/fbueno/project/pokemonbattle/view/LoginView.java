@@ -4,7 +4,6 @@ import android.content.Intent;
 
 import am2.fbueno.project.pokemonbattle.entity.User;
 import am2.fbueno.project.pokemonbattle.utility.SecuritySession;
-import am2.fbueno.project.pokemonbattle.view.activity.MainActivity;
 
 /**
  * Created by FBueno on 11/11/2016.

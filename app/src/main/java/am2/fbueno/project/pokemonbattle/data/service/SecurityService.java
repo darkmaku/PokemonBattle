@@ -2,10 +2,13 @@ package am2.fbueno.project.pokemonbattle.data.service;
 
 import am2.fbueno.project.pokemonbattle.data.request.LoginRequest;
 import am2.fbueno.project.pokemonbattle.data.response.LoginResponse;
+import am2.fbueno.project.pokemonbattle.data.response.UserDetailResponse;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Url;
 
 /**
  * Created by FBueno on 11/11/2016.
@@ -20,4 +23,7 @@ public interface SecurityService {
     })
     @POST("/v1/users/login")
     Call<LoginResponse> login(@Body LoginRequest request);
+
+    @GET("/v1/data/UserDetail?where=ownerId%3D")
+    Call<UserDetailResponse> getUserDetails(@Url String url);
 }

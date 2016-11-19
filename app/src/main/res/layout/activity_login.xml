@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="am2.fbueno.project.pokemonbattle.view.activity.LoginActivity">
+    tools:context="am2.fbueno.project.pokemonbattle.implementation.LoginImplementation">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

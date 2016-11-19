@@ -19,26 +19,26 @@ public class LoginPresenter {
     private SecurityService securityService;
     private LoginView loginView;
 
-    private LoginPresenter(LoginView loginView){
+    private LoginPresenter(LoginView loginView) {
         this.loginView = loginView;
         this.securityService = ApiBuilder.getSecurityClient();
     }
 
-    public static LoginPresenter MakePresenter(LoginView loginView){
+    public static LoginPresenter MakePresenter(LoginView loginView) {
         return new LoginPresenter(loginView);
     }
 
-    public void login(String login, String password){
+    public void login(String login, String password) {
         LoginRequest request = new LoginRequest(login, password);
         Call<LoginResponse> responseCall = securityService.login(request);
         responseCall.enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                if(response.isSuccessful()){
+                if (response.isSuccessful()) {
                     LoginResponse responseLogin = response.body();
                     User user = Mapper.ParseLoginResponse(responseLogin);
                     loginView.gotoMain(user);
-                }else {
+                } else {
                     loginView.showMessage("Error al ingresar al sistema!");
                 }
             }

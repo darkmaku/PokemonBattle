@@ -1,12 +1,11 @@
-package am2.fbueno.project.pokemonbattle.view.activity;
+package am2.fbueno.project.pokemonbattle.implementation;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import am2.fbueno.project.pokemonbattle.R;
 import am2.fbueno.project.pokemonbattle.view.View;
 
-public class MainActivity extends View {
+public class MainImplementation extends View {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
