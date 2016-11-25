@@ -20,7 +20,7 @@
         </activity>
         <activity android:name=".implementation.LoginImplementation" />
         <activity android:name=".implementation.MainImplementation" />
-        <activity android:name=".implementation.UserDetailImplementation"></activity>
+        <activity android:name=".implementation.UserDetailImplementation" />
     </application>
 
 </manifest>

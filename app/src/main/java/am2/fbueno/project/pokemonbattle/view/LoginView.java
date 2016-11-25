@@ -1,8 +1,6 @@
 package am2.fbueno.project.pokemonbattle.view;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 
 import am2.fbueno.project.pokemonbattle.entity.User;
 import am2.fbueno.project.pokemonbattle.utility.SecuritySession;

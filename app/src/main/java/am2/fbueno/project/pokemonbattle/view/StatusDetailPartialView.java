@@ -8,16 +8,13 @@ import android.support.v4.app.Fragment;
  */
 
 public abstract class StatusDetailPartialView extends Fragment {
+
     private UserDetailView userDetailView;
 
     @Override
-    public void onAttach(Activity context) {
-        super.onAttach(context);
-        if (context instanceof UserDetailView) {
-            userDetailView = (UserDetailView) context;
-        } else {
-            throw new RuntimeException(context.toString() + " must implement OnFragmentInteractionListener");
-        }
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        userDetailView = (UserDetailView)activity;
     }
 
     @Override
@@ -26,8 +23,14 @@ public abstract class StatusDetailPartialView extends Fragment {
         userDetailView = null;
     }
 
-    public UserDetailView getUserDetailView() {
+    public UserDetailView getUserDetailView(){
         return userDetailView;
     }
+
+    public abstract void setVictories(int value);
+
+    public abstract void setLoses(int value);
+
+    public abstract void setBattles(int value);
 
 }

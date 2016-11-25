@@ -3,6 +3,7 @@ package am2.fbueno.project.pokemonbattle.data.service;
 import am2.fbueno.project.pokemonbattle.data.request.LoginRequest;
 import am2.fbueno.project.pokemonbattle.data.response.LoginResponse;
 import am2.fbueno.project.pokemonbattle.data.response.UserDetailResponse;
+import am2.fbueno.project.pokemonbattle.data.response.UserListResponse;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -30,6 +31,6 @@ public interface SecurityService {
             "secret-key: 65E0A253-9DAE-3F98-FF8C-F02429CA7B00",
             "application-type: REST"
     })
-    @GET("/v1/data/UserDetail?where=ownerId%3D")
-    Call<UserDetailResponse> getUserDetails(@Url String url);
+    @GET("/v1/data/Users")
+    Call<UserListResponse> getUsers();
 }
