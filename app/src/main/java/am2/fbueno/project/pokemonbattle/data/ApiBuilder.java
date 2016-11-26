@@ -1,5 +1,6 @@
 package am2.fbueno.project.pokemonbattle.data;
 
+import am2.fbueno.project.pokemonbattle.data.service.BattleService;
 import am2.fbueno.project.pokemonbattle.data.service.DataService;
 import am2.fbueno.project.pokemonbattle.data.service.SecurityService;
 import am2.fbueno.project.pokemonbattle.data.service.UserService;
@@ -19,6 +20,21 @@ public class ApiBuilder {
     private static SecurityService securityApi;
     private static DataService dataApi;
     private static UserService userApi;
+    private static BattleService battleApi;
+
+    public static BattleService getBattleClient() {
+        if(battleApi == null){
+            Retrofit.Builder builder = new Retrofit.Builder()
+                    .baseUrl(API_BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create());
+            httpClient = new OkHttpClient.Builder();
+            httpClient.addInterceptor(interceptor());
+
+            Retrofit retrofit = builder.client(httpClient.build()).build();
+            battleApi = retrofit.create(BattleService.class);
+        }
+        return battleApi;
+    }
 
     public static SecurityService getSecurityClient() {
         if (securityApi == null) {
