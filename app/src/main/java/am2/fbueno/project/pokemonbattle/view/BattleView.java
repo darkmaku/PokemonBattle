@@ -10,8 +10,8 @@ public abstract class BattleView extends View {
 
     private BattlePresenter battlePresenter;
 
-    public BattleView() {
-        this.battlePresenter = BattlePresenter.Make(this);
+    public void setBattlePresenter(BattlePresenter battlePresenter) {
+        this.battlePresenter = battlePresenter;
     }
 
     public BattlePresenter getBattlePresenter() {

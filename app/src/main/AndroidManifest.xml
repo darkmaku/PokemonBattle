@@ -21,6 +21,7 @@
         <activity android:name=".implementation.LoginImplementation" />
         <activity android:name=".implementation.MainImplementation" />
         <activity android:name=".implementation.UserDetailImplementation" />
+        <activity android:name=".implementation.BattleImplementation" />
     </application>
 
 </manifest>

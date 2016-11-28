@@ -17,10 +17,13 @@ public abstract class UserDetailView extends View {
 
     private UserDetailPresenter userDetailPresenter;
 
-    public UserDetailView(StatusDetailPartialView statusDetailPartialView, ShowDetailPartialView showDetailPartialView){
+    public void setUserDetailPresenter(UserDetailPresenter userDetailPresenter) {
+        this.userDetailPresenter = userDetailPresenter;
+    }
+
+    public void attachViews(StatusDetailPartialView statusDetailPartialView, ShowDetailPartialView showDetailPartialView){
         statusPartialView = statusDetailPartialView;
         showPartialView = showDetailPartialView;
-        userDetailPresenter = UserDetailPresenter.Make(this);
     }
 
     public UserDetailPresenter getUserDetailPresenter() {

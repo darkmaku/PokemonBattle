@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import am2.fbueno.project.pokemonbattle.R;
+import am2.fbueno.project.pokemonbattle.domain.BattlePresenter;
 import am2.fbueno.project.pokemonbattle.view.BattleView;
 
 /**
@@ -20,7 +21,6 @@ public class BattleImplementation extends BattleView {
     private Button btnStart;
 
     public BattleImplementation(){
-        super();
     }
 
     @Override
@@ -47,6 +47,7 @@ public class BattleImplementation extends BattleView {
     }
 
     private void initialize(){
+        setBattlePresenter(BattlePresenter.Make(this));
         txtWinner = (TextView)findViewById(R.id.txtWinnerResult);
         txtLooser = (TextView)findViewById(R.id.txtLooserResult);
         txtOpponent = (TextView) findViewById(R.id.txtOpponent);

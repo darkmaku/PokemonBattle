@@ -1,5 +1,7 @@
 package am2.fbueno.project.pokemonbattle.domain;
 
+import android.util.Log;
+
 import java.util.List;
 
 import am2.fbueno.project.pokemonbattle.data.ApiBuilder;
@@ -86,6 +88,7 @@ public class UserDetailPresenter {
 
     private void initializeDefaultValues(){
         String url = buildUserDetailUrl();
+        Log.v("url", url);
         Call<UserDetailResponse> responseCall = userService.getUserDetails(url);
         responseCall.enqueue(new Callback<UserDetailResponse>() {
             @Override

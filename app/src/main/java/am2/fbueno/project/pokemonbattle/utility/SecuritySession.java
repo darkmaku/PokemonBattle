@@ -39,6 +39,7 @@ public class SecuritySession {
         SharedPreferences sharedPreferences= getSharedPreferences(context);
         Gson jsonParser = new Gson();
         String userJson = sharedPreferences.getString(USER_KEY,null);
+        Log.v("json", userJson);
         return jsonParser.fromJson(userJson, User.class);
     }
 

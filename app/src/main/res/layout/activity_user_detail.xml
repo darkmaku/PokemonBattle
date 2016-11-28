@@ -10,4 +10,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="am2.fbueno.project.pokemonbattle.implementation.UserDetailImplementation">
 
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="am2.fbueno.project.pokemonbattle.implementation.StatusDetailImplementation"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="22dp"
+        android:id="@+id/frgStatus" />
+
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="am2.fbueno.project.pokemonbattle.implementation.ShowDetailImplementation"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/frgDetail" />
 </RelativeLayout>
