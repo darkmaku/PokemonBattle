@@ -37,7 +37,7 @@ public class ShowDetailImplementation extends ShowDetailPartialView {
 
     @Override
     public void setBattlesDetail(List<BattleDetail> battles) {
-        BattleDetailAdapter adapter = new BattleDetailAdapter(getView().getContext(),battles);
+        BattleDetailAdapter adapter = new BattleDetailAdapter(getActivity(),battles);
         battlesList.setAdapter(adapter);
     }
 }

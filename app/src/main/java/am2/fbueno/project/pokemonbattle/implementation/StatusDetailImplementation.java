@@ -1,6 +1,7 @@
 package am2.fbueno.project.pokemonbattle.implementation;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,16 +53,16 @@ public class StatusDetailImplementation extends StatusDetailPartialView {
 
     @Override
     public void setVictories(int value) {
-        txtVictories.setText(value);
+        txtVictories.setText(Integer.toString(value));
     }
 
     @Override
     public void setLoses(int value) {
-        txtLoses.setText(value);
+        txtLoses.setText(Integer.toString(value));
     }
 
     @Override
     public void setBattles(int value) {
-        txtBattle.setText(value);
+        txtBattle.setText(Integer.toString(value));
     }
 }

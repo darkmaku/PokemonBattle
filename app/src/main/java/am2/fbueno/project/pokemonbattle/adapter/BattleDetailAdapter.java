@@ -57,9 +57,9 @@ public class BattleDetailAdapter extends BaseAdapter {
         if(entry != null) {
             ViewHolder holder = (ViewHolder)v.getTag();
             holder.txtWinner.setText(entry.getWinner());
-            holder.txtWinnerScore.setText(entry.getWinnerScore());
+            holder.txtWinnerScore.setText(Integer.toString(entry.getWinnerScore()));
             holder.txtLooser.setText(entry.getLooser());
-            holder.txtLooserScore.setText(entry.getLooserScore());
+            holder.txtLooserScore.setText(Integer.toString(entry.getLooserScore()));
         }
         return v;
     }

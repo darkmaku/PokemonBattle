@@ -16,10 +16,10 @@ public class UserDetailImplementation extends UserDetailView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_detail);
-        setUserDetailPresenter(UserDetailPresenter.Make(this));
         FragmentManager fragmentManager = getSupportFragmentManager();
         StatusDetailImplementation statusImplementation = (StatusDetailImplementation)fragmentManager.findFragmentById(R.id.frgStatus);
         ShowDetailImplementation showImplementation =(ShowDetailImplementation)fragmentManager.findFragmentById(R.id.frgDetail);
         attachViews(statusImplementation, showImplementation);
+        setUserDetailPresenter(UserDetailPresenter.Make(this));
     }
 }

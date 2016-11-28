@@ -52,7 +52,14 @@ public class ApiBuilder {
 
     public static UserService getUserClient(){
         if(userApi == null){
-            Retrofit retrofit = new Retrofit.Builder().baseUrl(API_BASE_URL).build();
+            //Retrofit retrofit = new Retrofit.Builder().baseUrl(API_BASE_URL).build();
+            Retrofit.Builder builder = new Retrofit.Builder()
+                    .baseUrl(API_BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create());
+            httpClient = new OkHttpClient.Builder();
+            httpClient.addInterceptor(interceptor());
+
+            Retrofit retrofit = builder.client(httpClient.build()).build();
             userApi = retrofit.create(UserService.class);
         }
         return userApi;
@@ -60,7 +67,14 @@ public class ApiBuilder {
 
     public static DataService getDataClient() {
         if (dataApi == null) {
-            Retrofit retrofit = new Retrofit.Builder().baseUrl(API_BASE_URL).build();
+            //Retrofit retrofit = new Retrofit.Builder().baseUrl(API_BASE_URL).build();
+            Retrofit.Builder builder = new Retrofit.Builder()
+                    .baseUrl(API_BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create());
+            httpClient = new OkHttpClient.Builder();
+            httpClient.addInterceptor(interceptor());
+
+            Retrofit retrofit = builder.client(httpClient.build()).build();
             dataApi = retrofit.create(DataService.class);
         }
         return dataApi;

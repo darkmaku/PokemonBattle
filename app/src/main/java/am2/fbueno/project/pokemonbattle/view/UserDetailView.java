@@ -1,6 +1,7 @@
 package am2.fbueno.project.pokemonbattle.view;
 
 import android.app.Activity;
+import android.util.Log;
 
 import java.util.List;
 
