@@ -3,25 +3,62 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Buscar"
-        android:id="@+id/btnSearch"/>
+
     <TextView
+        android:text="Batalla pokemon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtOpponent"/>
+        android:id="@+id/textView4"
+        android:textSize="26sp"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textStyle="normal|bold" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pelear"
-        android:id="@+id/btnStart"/>
+        android:text="Buscar oponente"
+        android:id="@+id/btnSearch"
+        android:background="@drawable/botondos" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Codigo"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView5"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/txtOpponent"/>
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ganador"/>
+        android:id="@+id/textView6"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pelear"
+        android:id="@+id/btnStart"
+        android:background="@drawable/botondos" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ganador"
+        android:textSize="18sp" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,7 +67,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Perdedor"/>
+        android:text="Perdedor"
+        android:textSize="18sp" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

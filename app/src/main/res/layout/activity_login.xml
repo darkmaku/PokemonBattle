@@ -12,6 +12,18 @@
     tools:context="am2.fbueno.project.pokemonbattle.implementation.LoginImplementation"
     android:weightSum="1">
 
+    <TextView
+        android:text="Pokemon Battle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textSize="26sp"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:singleLine="false" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,8 +32,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Usuario"
-            android:textSize="8pt"
-            android:layout_weight="1"/>
+            android:layout_weight="0.86"
+            android:textSize="18sp" />
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,8 +48,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Contraseña"
-            android:textSize="8pt"
-            android:layout_weight="1"/>
+            android:layout_weight="0.41"
+            android:textSize="18sp" />
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,9 +58,12 @@
     </LinearLayout>
 
     <Button
-        android:background="@drawable/boton"
+        android:background="@drawable/botondos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ingresar"
-        android:id="@+id/btnLogin"/>
+        android:id="@+id/btnLogin"
+        android:password="false"
+        android:textStyle="normal|bold"
+        android:textSize="15sp" />
 </LinearLayout>
