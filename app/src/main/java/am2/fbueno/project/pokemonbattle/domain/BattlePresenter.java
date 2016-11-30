@@ -1,5 +1,7 @@
 package am2.fbueno.project.pokemonbattle.domain;
 
+import android.util.Log;
+
 import java.util.List;
 import java.util.Random;
 
@@ -68,6 +70,7 @@ public class BattlePresenter {
             public void onResponse(Call<UserListResponse> call, Response<UserListResponse> response) {
                 UserListResponse listResponse = response.body();
                 List<Player> players = listResponse.getData();
+                Log.v("players", players.size()+"");
                 Random random = new Random();
                 int result = random.nextInt(players.size());
                 Player player = players.get(result);

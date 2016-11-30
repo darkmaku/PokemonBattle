@@ -8,34 +8,40 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Batallas" />
+        android:text="Batallas"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtBattle"
-        android:text="0" />
+        android:text="0"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Victorias" />
+        android:text="Victorias"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtVictories"
-        android:text="0" />
+        android:text="0"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Derrotas" />
+        android:text="Derrotas"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtLoses"
-        android:text="0" />
+        android:text="0"
+        android:textSize="18sp" />
 
 </LinearLayout>

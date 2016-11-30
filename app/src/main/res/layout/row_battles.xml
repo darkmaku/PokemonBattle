@@ -7,34 +7,51 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ganador:"/>
+        android:text="Ganador:"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtWinner"/>
+        android:id="@+id/txtWinner"
+        android:textSize="18sp"
+        android:textStyle="normal|italic" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Puntaje:"/>
+        android:text="Puntaje:"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtWinnerScore"/>
+        android:id="@+id/txtWinnerScore"
+        android:textSize="18sp"
+        android:textStyle="normal|italic" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Perdedor:"/>
+        android:text="Perdedor:"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtLooser"/>
+        android:id="@+id/txtLooser"
+        android:textSize="18sp"
+        android:textStyle="normal|italic" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Puntaje:"/>
+        android:text="Puntaje:"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtLooserScore"/>
+        android:id="@+id/txtLooserScore"
+        android:textStyle="normal|italic" />
 
 </LinearLayout>
