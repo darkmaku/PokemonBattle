@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import am2.fbueno.project.pokemonbattle.R;
 import am2.fbueno.project.pokemonbattle.domain.StartPresenter;
-import am2.fbueno.project.pokemonbattle.view.View;
+import am2.fbueno.project.pokemonbattle.view.base.View;
 
 public class StartImplementation extends View {
     private static final long SPLASH_SCREEN_DELAY = 2000;

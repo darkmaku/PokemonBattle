@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import am2.fbueno.project.pokemonbattle.R;
-import am2.fbueno.project.pokemonbattle.view.View;
+import am2.fbueno.project.pokemonbattle.view.base.View;
 
 public class MainImplementation extends View {
 

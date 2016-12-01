@@ -30,7 +30,7 @@ public class StatusDetailImplementation extends StatusDetailPartialView {
         txtBattle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getUserDetailView().getUserDetailPresenter().showVictories();
+                getAttachedView().getUserDetailPresenter().showVictories();
             }
         });
 
@@ -38,7 +38,7 @@ public class StatusDetailImplementation extends StatusDetailPartialView {
         txtVictories.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getUserDetailView().getUserDetailPresenter().showVictories();
+                getAttachedView().getUserDetailPresenter().showVictories();
             }
         });
 
@@ -46,7 +46,7 @@ public class StatusDetailImplementation extends StatusDetailPartialView {
         txtLoses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getUserDetailView().getUserDetailPresenter().showLooses();
+                getAttachedView().getUserDetailPresenter().showLooses();
             }
         });
     }

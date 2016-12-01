@@ -1,4 +1,4 @@
-package am2.fbueno.project.pokemonbattle.view;
+package am2.fbueno.project.pokemonbattle.view.base;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -25,7 +25,6 @@ public abstract class View extends AppCompatActivity {
                         });
         AlertDialog alert = builder.create();
         alert.show();
-        Toast.makeText(getContext(), message, Toast.LENGTH_LONG);
     }
 
     public Context getContext(){

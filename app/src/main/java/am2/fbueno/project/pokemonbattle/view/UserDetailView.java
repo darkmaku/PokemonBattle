@@ -1,12 +1,10 @@
 package am2.fbueno.project.pokemonbattle.view;
 
-import android.app.Activity;
-import android.util.Log;
-
 import java.util.List;
 
 import am2.fbueno.project.pokemonbattle.domain.UserDetailPresenter;
 import am2.fbueno.project.pokemonbattle.entity.BattleDetail;
+import am2.fbueno.project.pokemonbattle.view.base.View;
 
 /**
  * Created by FBueno on 11/18/2016.

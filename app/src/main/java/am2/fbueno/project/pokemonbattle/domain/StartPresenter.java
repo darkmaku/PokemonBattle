@@ -6,7 +6,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import am2.fbueno.project.pokemonbattle.utility.SecuritySession;
-import am2.fbueno.project.pokemonbattle.view.View;
+import am2.fbueno.project.pokemonbattle.view.base.View;
 
 /**
  * Created by FBueno on 11/16/2016.
