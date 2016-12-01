@@ -18,7 +18,7 @@
         android:id="@+id/frgStatus"/>
 
     <fragment
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:name="am2.fbueno.project.pokemonbattle.implementation.ShowDetailImplementation"
